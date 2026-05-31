@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-05-31T17:22:00.033Z",
+  "checkedFiles": [
+    "apps/web/lib/runtime/commerce-mode.ts",
+    "apps/web/components/commerce/TestModeNotice.tsx",
+    "apps/web/components/commerce/index.ts",
+    "apps/web/app/page.tsx",
+    "apps/web/app/servizi/page.tsx",
+    "apps/web/app/servizi/[slug]/page.tsx",
+    "apps/web/app/prezzi/page.tsx",
+    "apps/web/app/checkout/page.tsx",
+    "apps/web/components/catalog/CatalogServiceCard.tsx",
+    "apps/web/app/globals.css",
+    "docs/releases/0.75.4.md"
+  ],
+  "failures": []
+}

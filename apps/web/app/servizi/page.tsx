@@ -1,6 +1,7 @@
 import { buildPublicMetadata } from '@/lib/seo/metadata';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { TestModeNotice } from '@/components/commerce';
 import { CatalogServiceCard } from '@/components/catalog/CatalogServiceCard';
 import { Button, SectionHeader } from '@/components/ds';
 import { ComplianceNotice, ScenarioCard, TrustStrip } from '@/components/public-funnel';
@@ -46,6 +47,7 @@ export default function ServiziPage() {
               {categories.map((category) => <span key={category}>{category}</span>)}
             </div>
             <TrustStrip />
+            <TestModeNotice context="catalog" />
           </div>
         </section>
 

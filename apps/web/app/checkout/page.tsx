@@ -1,9 +1,11 @@
 import { BillingProfileForm, CheckoutLegalConfirmation, CheckoutOrderSummary, PaymentStatusPanel } from '@/components/billing';
+import { TestModeNotice } from '@/components/commerce';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Alert, Button, Card, Field, SectionHeader, Stepper, TrustNotice } from '@/components/ds';
 import { checkoutSteps } from '@/lib/billing/checkout';
 import { getCatalogServiceByCode, catalogServices } from '@/lib/catalog/catalog';
+import { isCommerceTestMode } from '@/lib/runtime/commerce-mode';
 
 const getServiceByCode = getCatalogServiceByCode;
 
@@ -18,6 +20,7 @@ export default function CheckoutPage({ searchParams }: CheckoutPageProps) {
   const selectedCode = searchParams.service ?? searchParams.product;
   const product = getServiceByCode(selectedCode) ?? catalogServices.find((service) => service.code === 'COMPANY_PRO') ?? catalogServices[0];
   const assisted = product.status === 'assisted';
+  const testMode = isCommerceTestMode();
   const subjectHelp = product.scenario === 'payment-data'
     ? 'Inserisci solo il dato operativo richiesto dal servizio scelto, ad esempio IBAN, email o numero di telefono.'
     : 'Inserisci ragione sociale o partita IVA del soggetto da verificare.';
@@ -33,6 +36,7 @@ export default function CheckoutPage({ searchParams }: CheckoutPageProps) {
             description="Il checkout mostra servizio, dati richiesti, totale indicativo, limiti e conferme prima del pagamento. Nessun dato carta viene salvato su ClientiAffidabili.it."
           />
           <Stepper steps={checkoutSteps.map((step) => step.label)} currentStep={assisted ? 3 : 4} />
+          <TestModeNotice context="checkout" />
           <div className="ca-error-summary" role="status" aria-live="polite">
             <strong>Prima di procedere controlla questi punti:</strong>
             <ul>
@@ -80,9 +84,16 @@ export default function CheckoutPage({ searchParams }: CheckoutPageProps) {
                         : 'Dopo il pagamento confermato, la richiesta viene registrata e la verifica viene avviata secondo i limiti indicati nel servizio.'}
                     </p>
                   </Alert>
-                  <Button href={assisted ? '/dashboard' : '/checkout/success'} size="lg">
-                    {assisted ? 'Invia richiesta assistita' : 'Procedi al pagamento protetto'}
-                  </Button>
+                  {testMode ? (
+                    <div className="ca-checkout-test-actions">
+                      <Button size="lg" disabled>Pagamento disabilitato in modalità test</Button>
+                      <Button href="/contatti" variant="outline" size="lg">Richiedi supporto per una prova</Button>
+                    </div>
+                  ) : (
+                    <Button href={assisted ? '/dashboard' : '/checkout/success'} size="lg">
+                      {assisted ? 'Invia richiesta assistita' : 'Procedi al pagamento protetto'}
+                    </Button>
+                  )}
                 </form>
               </Card>
             </section>

@@ -2,7 +2,9 @@ import { buildPublicMetadata } from '@/lib/seo/metadata';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { PricingComparison } from '@/components/catalog/PricingComparison';
+import { TestModeNotice } from '@/components/commerce';
 import { Button, Card, Checklist, SectionHeader, TrustNotice } from '@/components/ds';
+import { isCommerceTestMode } from '@/lib/runtime/commerce-mode';
 import { calculateSnapshot, getPublishedCatalogServices } from '@/lib/catalog/catalog';
 import { pricingBundles } from '@/lib/content';
 
@@ -15,6 +17,7 @@ export const metadata = buildPublicMetadata({
 
 export default function PrezziPage() {
   const services = getPublishedCatalogServices();
+  const testMode = isCommerceTestMode();
 
   return (
     <>
@@ -30,6 +33,7 @@ export default function PrezziPage() {
             <TrustNotice title="Regola di trasparenza" tone="info">
               <p>Il prezzo netto è visibile nelle schede. Prima del pagamento il riepilogo indica IVA, eventuali imposte o diritti applicabili e totale dell’ordine.</p>
             </TrustNotice>
+            <TestModeNotice context="pricing" />
           </div>
         </section>
 
@@ -44,7 +48,8 @@ export default function PrezziPage() {
                   <p>{bundle.description}</p>
                   <div className="ca-pricing-bundle__price">{bundle.price}</div>
                   <Checklist items={bundle.services} />
-                  <Button href={bundle.ctaHref} fullWidth>Avvia verifica</Button>
+                  {testMode ? <p className="ca-test-mode-inline">Ambiente test: il pulsante mostra il percorso ma non abilita pagamenti reali.</p> : null}
+                  <Button href={bundle.ctaHref} fullWidth>{testMode ? 'Vedi percorso in modalità test' : 'Avvia verifica'}</Button>
                 </Card>
               ))}
             </div>

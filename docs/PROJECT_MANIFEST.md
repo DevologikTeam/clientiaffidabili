@@ -41,3 +41,8 @@ Prossimo sprint: M22-A Pilot Launch & Operations Analysis.
 ## v0.75.3 note
 
 Patch build/type guard: `EducationMetaStrip` usa mappe esaustive tipizzate e il QA pubblico blocca confronti legacy non presenti nelle union runtime.
+
+
+## v0.75.4
+
+Test mode commerce visibility: public pages and checkout clearly show when checkout is disabled for local/Coolify preflight environments.

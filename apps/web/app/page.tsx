@@ -1,3 +1,4 @@
+import { TestModeNotice } from '@/components/commerce';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Button, SectionHeader, StatCard } from '@/components/ds';
@@ -34,6 +35,7 @@ export default function HomePage() {
         <section className="section ca-section-tight">
           <div className="container ca-stack">
             <CommercialProofStrip />
+            <TestModeNotice context="public" />
             <TrustStrip />
           </div>
         </section>

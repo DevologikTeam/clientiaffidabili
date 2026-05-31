@@ -1,4 +1,11 @@
 
+## 0.75.4 - Test Mode Commerce Visibility
+
+- Added visible test-mode notices on public commerce pages when `ENABLE_CHECKOUT=false`.
+- Checkout now clearly disables payment action in test mode.
+- Added QA gate `qa:test-mode-commerce-visibility`.
+
+
 ## v0.75.3 - Contact Form Senior UX Review
 
 - Migliorato il form contatti pubblico con layout a due colonne, card form piu stretta, fieldset, hint e messaggi success/error.

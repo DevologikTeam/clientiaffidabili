@@ -907,3 +907,31 @@ fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
     padding: 20px;
   }
 }
+
+/* Test mode visibility v0.75.4 */
+.ca-test-mode-notice {
+  max-width: 920px;
+}
+.ca-test-mode-inline {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(217,119,6,.22);
+  border-radius: 14px;
+  background: rgba(217,119,6,.08);
+  color: #78350F;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+.ca-checkout-test-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.ca-button[disabled],
+.ca-button[aria-disabled='true'] {
+  opacity: .62;
+  cursor: not-allowed;
+  box-shadow: none;
+}

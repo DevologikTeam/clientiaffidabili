@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-31T16:13:09.828Z",
+  "generatedAt": "2026-05-31T17:22:09.212Z",
   "status": "passed",
   "scanned": {
-    "tsxFiles": 221,
-    "sourceFiles": 322,
+    "tsxFiles": 222,
+    "sourceFiles": 325,
     "statCardUsages": 55,
     "numericStatCardUsages": 38,
     "legacyDataTableUsageFiles": 16,

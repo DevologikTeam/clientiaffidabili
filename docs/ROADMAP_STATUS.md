@@ -166,3 +166,8 @@ Voce mantenuta per regression gate M20-S.
 ## v0.75.3 note
 
 Patch copy cliente-finale e Git flow Coolify aggiunti: niente tassonomie interne nelle guide pubbliche, branch develop/main, tag versione e workflow webhook Coolify.
+
+
+## v0.75.4
+
+Test mode commerce visibility: public pages and checkout clearly show when checkout is disabled for local/Coolify preflight environments.

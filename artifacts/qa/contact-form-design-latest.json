@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checkedAt": "2026-05-31T16:13:08.940Z",
+  "checkedAt": "2026-05-31T17:22:08.415Z",
   "checkedFiles": [
     "apps/web/app/contatti/page.tsx",
     "apps/web/components/sales-crm/ContactCaptureForm.tsx",

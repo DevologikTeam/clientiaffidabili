@@ -79,7 +79,7 @@ for (const compose of ['docker-compose.yml', 'docker-compose.coolify.yml']) {
 assertIncludes('.env.example', 'INTERNAL_API_URL=http://api:3001');
 
 const pkg = read('package.json');
-for (const token of ['"version": "0.75.3"', 'qa:contact-form-design', 'node scripts/qa-contact-form-design.js']) {
+for (const token of ['"version": "0.75.4"', 'qa:contact-form-design', 'node scripts/qa-contact-form-design.js']) {
   if (!pkg.includes(token)) failures.push(`package.json missing ${token}`);
 }
 
