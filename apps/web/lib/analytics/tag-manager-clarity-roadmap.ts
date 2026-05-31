@@ -1,0 +1,30 @@
+export const tagManagerClarityRoadmap = {
+  module: 'M16B - Tag Manager, Clarity & Campaign Event Tracking',
+  version: '0.59.1',
+  insertedAfter: 'M16-S Analytics, Attribution & Growth Intelligence Development',
+  before: 'M17-A OpenAI Assisted Operations & Content Copilot Analysis',
+  sprints: [
+    'M16B-A Tag Manager & Clarity Analysis',
+    'M16B-P Tag Manager & Clarity Design',
+    'M16B-S Tag Manager & Clarity Development',
+  ],
+  settings: {
+    tagManager: ['enabled', 'containerId', 'serverEndpoint', 'environment', 'consentMode', 'allowedEvents'],
+    clarity: ['enabled', 'projectId', 'requireAnalyticsConsent', 'maskMode', 'disabledPathPrefixes'],
+  },
+  defaultDisabledPathPrefixes: ['/admin', '/dashboard/report', '/dashboard/fatture', '/checkout', '/api'],
+  forbiddenPayloadFields: [
+    'email',
+    'phone',
+    'taxCode',
+    'vatNumber',
+    'iban',
+    'rawPayload',
+    'apiKey',
+    'token',
+    'prompt',
+    'completion',
+    'card',
+    'ipAddress',
+  ],
+} as const;

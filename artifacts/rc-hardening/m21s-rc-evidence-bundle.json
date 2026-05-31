@@ -1,0 +1,216 @@
+{
+  "release": "0.75.0",
+  "sprint": "M21-S RC Hardening Development",
+  "generatedAt": "2026-05-31T14:40:19.934Z",
+  "overallStatus": "blocked",
+  "blockingGateCount": 8,
+  "openBlockingGateCount": 8,
+  "gates": [
+    {
+      "id": "rc-build-typecheck-docker",
+      "blockerCode": "RC-P0-001",
+      "label": "Build/typecheck/Docker reali",
+      "owner": "Tech Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "blocked",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "artifacts/rc-hardening/build/pnpm-build.log",
+        "artifacts/rc-hardening/build/docker-build.log"
+      ],
+      "requiredEvidence": [
+        "artifacts/rc-hardening/build/pnpm-build.log",
+        "artifacts/rc-hardening/build/docker-build.log"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-dependency-freeze",
+      "blockerCode": "RC-P0-002",
+      "label": "Dependency freeze e lockfile",
+      "owner": "Tech Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "blocked",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "pnpm-lock.yaml"
+      ],
+      "requiredEvidence": [
+        "pnpm-lock.yaml"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-env-secrets-feature-flags",
+      "blockerCode": "RC-P0-003",
+      "label": "ENV, secrets e feature flag",
+      "owner": "Security Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "ready_to_run",
+      "attachedArtifacts": [],
+      "missingEvidence": [],
+      "requiredEvidence": [],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-database-migration-restore",
+      "blockerCode": "RC-P0-004",
+      "label": "Migrazioni, backup e restore",
+      "owner": "Backend Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "blocked",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "artifacts/rc-hardening/database/restore-drill.log"
+      ],
+      "requiredEvidence": [
+        "artifacts/rc-hardening/database/restore-drill.log"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-provider-sandbox-certification",
+      "blockerCode": "RC-P0-005",
+      "label": "Provider sandbox reali",
+      "owner": "Operations Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": true,
+      "status": "blocked",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "artifacts/rc-hardening/providers/sandbox-certification-real.json"
+      ],
+      "requiredEvidence": [
+        "artifacts/rc-hardening/providers/sandbox-certification-real.json"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-browser-e2e-real",
+      "blockerCode": "RC-P0-006",
+      "label": "Playwright reale",
+      "owner": "QA Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "blocked",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "playwright-report/index.html"
+      ],
+      "requiredEvidence": [
+        "playwright-report/index.html"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-security-privacy-freeze",
+      "blockerCode": "RC-P0-007",
+      "label": "Security/privacy freeze",
+      "owner": "Security Lead",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "ready_to_run",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "artifacts/rc-hardening/security-privacy-freeze.json"
+      ],
+      "requiredEvidence": [
+        "artifacts/rc-hardening/security-privacy-freeze.json"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-evidence-bundle-signoff",
+      "blockerCode": "RC-P0-008",
+      "label": "Evidence bundle e sign-off",
+      "owner": "Product Owner",
+      "blocksReleaseCandidate": true,
+      "waiverAllowed": false,
+      "status": "blocked",
+      "attachedArtifacts": [],
+      "missingEvidence": [
+        "artifacts/rc-hardening/owner-signoffs.json"
+      ],
+      "requiredEvidence": [
+        "artifacts/rc-hardening/owner-signoffs.json"
+      ],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    },
+    {
+      "id": "rc-observability-support-runbook",
+      "blockerCode": "RC-P1-001",
+      "label": "Observability/support runbook",
+      "owner": "Operations Lead",
+      "blocksReleaseCandidate": false,
+      "waiverAllowed": true,
+      "status": "ready_to_run",
+      "attachedArtifacts": [],
+      "missingEvidence": [],
+      "requiredEvidence": [],
+      "nextAction": "Allegare evidenza reale redatta o mantenere gate bloccante."
+    }
+  ],
+  "artifactInventory": [
+    {
+      "id": "artifact-build-log",
+      "gateId": "rc-build-typecheck-docker",
+      "path": "artifacts/rc-hardening/build/pnpm-build.log",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-docker-log",
+      "gateId": "rc-build-typecheck-docker",
+      "path": "artifacts/rc-hardening/build/docker-build.log",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-lockfile",
+      "gateId": "rc-dependency-freeze",
+      "path": "pnpm-lock.yaml",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-restore-drill",
+      "gateId": "rc-database-migration-restore",
+      "path": "artifacts/rc-hardening/database/restore-drill.log",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-provider-sandbox-real",
+      "gateId": "rc-provider-sandbox-certification",
+      "path": "artifacts/rc-hardening/providers/sandbox-certification-real.json",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-playwright-report",
+      "gateId": "rc-browser-e2e-real",
+      "path": "playwright-report/index.html",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-security-privacy-signoff",
+      "gateId": "rc-security-privacy-freeze",
+      "path": "artifacts/rc-hardening/security-privacy-freeze.json",
+      "requiredForRc": true,
+      "presentInPackage": false
+    },
+    {
+      "id": "artifact-owner-signoff",
+      "gateId": "rc-evidence-bundle-signoff",
+      "path": "artifacts/rc-hardening/owner-signoffs.json",
+      "requiredForRc": true,
+      "presentInPackage": false
+    }
+  ],
+  "signoffPolicy": "No RC sign-off while openBlockingGateCount > 0. Provider waiver is valid only as waived_with_feature_off."
+}

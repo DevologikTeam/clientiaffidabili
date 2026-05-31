@@ -1,0 +1,78 @@
+{
+  "release": "0.73.0",
+  "sprint": "M21-P RC Hardening Design",
+  "generatedAt": "2026-05-30",
+  "sourceSprint": "M21-A RC Hardening Analysis",
+  "status": "design-only; real execution remains required in M21-S and target environment",
+  "blockingGateCount": 8,
+  "gates": [
+    {
+      "id": "rc-build-typecheck-docker",
+      "blockerCode": "RC-P0-001",
+      "owner": "Tech Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["pnpm build log", "typecheck log", "Docker build log", "healthcheck summary"]
+    },
+    {
+      "id": "rc-dependency-freeze",
+      "blockerCode": "RC-P0-002",
+      "owner": "Tech Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["pnpm-lock.yaml", "dependency freeze summary"]
+    },
+    {
+      "id": "rc-env-secrets-feature-flags",
+      "blockerCode": "RC-P0-003",
+      "owner": "Security Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["secret scan", "environment diff", "feature flag export", "ENABLE_DEMO_DATA=false proof"]
+    },
+    {
+      "id": "rc-database-migration-restore",
+      "blockerCode": "RC-P0-004",
+      "owner": "Backend Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["migration baseline", "backup log", "restore drill log", "rollback plan"]
+    },
+    {
+      "id": "rc-provider-sandbox-certification",
+      "blockerCode": "RC-P0-005",
+      "owner": "Operations Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["sandbox run export", "provider error ledger", "webhook replay log", "waiver ledger when feature off"]
+    },
+    {
+      "id": "rc-browser-e2e-real",
+      "blockerCode": "RC-P0-006",
+      "owner": "QA Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["Playwright report", "browser screenshots", "failure triage summary"]
+    },
+    {
+      "id": "rc-security-privacy-freeze",
+      "blockerCode": "RC-P0-007",
+      "owner": "Security Lead",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["secret scan", "sensitive route noindex export", "tracking denylist export", "PII redaction review"]
+    },
+    {
+      "id": "rc-evidence-bundle-signoff",
+      "blockerCode": "RC-P0-008",
+      "owner": "Product Owner",
+      "blocksReleaseCandidate": true,
+      "requiredEvidence": ["evidence bundle JSON", "risk register", "owner signoffs", "release notes draft"]
+    }
+  ],
+  "waiverPolicy": {
+    "allowedStatus": "waived_with_feature_off",
+    "rule": "Only provider or feature gates can be waived, and only when the feature is disabled and excluded from the RC scope."
+  },
+  "m21sHandoff": [
+    "implement RC command center",
+    "generate blocked evidence bundle when real evidence is missing",
+    "connect sandbox certification to provider RC status",
+    "add production demo data guard",
+    "add lockfile/migration/restore blockers",
+    "aggregate build, Docker, Playwright and security artifacts"
+  ]
+}

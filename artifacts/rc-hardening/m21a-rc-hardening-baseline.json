@@ -1,0 +1,59 @@
+{
+  "release": "0.72.0",
+  "sprint": "M21-A RC Hardening Analysis",
+  "generatedAt": "2026-05-30",
+  "metrics": {
+    "webPageRoutes": 72,
+    "webLayouts": 6,
+    "webComponents": 137,
+    "apiModuleDirs": 25,
+    "apiControllers": 27,
+    "apiServices": 50,
+    "apiEntities": 74,
+    "qaScripts": 79,
+    "totalScripts": 85,
+    "e2eSpecs": 5,
+    "docsMarkdown": 830,
+    "hasPnpmLock": false,
+    "hasApiMigrations": false,
+    "dockerComposeHealthchecks": true,
+    "workflowRunsBuildTypecheckE2E": true,
+    "termScan": {
+      "mock": {
+        "matches": 140,
+        "files": 55
+      },
+      "demo": {
+        "matches": 195,
+        "files": 44
+      },
+      "placeholder": {
+        "matches": 40,
+        "files": 18
+      },
+      "waiver": {
+        "matches": 120,
+        "files": 14
+      },
+      "any": {
+        "matches": 231,
+        "files": 71
+      },
+      "rawPayload": {
+        "matches": 76,
+        "files": 42
+      },
+      "secret": {
+        "matches": 234,
+        "files": 73
+      },
+      "token": {
+        "matches": 419,
+        "files": 78
+      }
+    },
+    "routesWithMetadata": 10,
+    "sensitiveLayoutsWithNoindex": 5
+  },
+  "analysisStatus": "static-only; real build, Docker, Playwright, Lighthouse, provider sandbox, migrations and backup/restore must run in the target environment before RC sign-off"
+}

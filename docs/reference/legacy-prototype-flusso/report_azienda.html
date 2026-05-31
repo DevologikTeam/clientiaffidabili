@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Azienda - Acme Italia SpA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { background: #E2E8F0; padding: 20px 0; }
+        @media print { body { background: white; padding: 0; } .btn-print { display: none; } }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button class="btn btn-primary btn-print" onclick="window.print()">Stampa / Salva come PDF</button>
+    </div>
+
+    <div class="report-container">
+        <div class="report-header">
+            <div>
+                <div class="logo" style="margin-bottom: 10px;"><div class="logo-icon">✓</div>Clienti<span>Affidabili.it</span></div>
+                <h1 class="report-title">Report Azienda Completo</h1>
+            </div>
+            <div class="report-meta">
+                Data Evasione: <strong>29/05/2026</strong><br>
+                Codice Univoco: <strong>RPT-AZ-20260529-8472</strong>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">1. Dati Anagrafici Ufficiali</h2>
+            <div class="card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="data-label">Ragione Sociale</span>
+                        <span class="data-value" style="font-size: 18px; color: var(--primary);">ACME ITALIA S.P.A.</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Forma Giuridica</span>
+                        <span class="data-value">Società per Azioni (S.P.A.)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Partita IVA / Codice Fiscale</span>
+                        <span class="data-value">01234567890</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Sede Legale</span>
+                        <span class="data-value">Via Roma 100, 20100 Milano (MI)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Data Costituzione</span>
+                        <span class="data-value">15/03/2005</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Stato Attività</span>
+                        <span class="data-value" style="color: var(--success);">Attiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">2. Analisi Rischio di Credito (Scoring)</h2>
+            <div class="card grid-2" style="align-items: center;">
+                <div class="score-box">
+                    <div class="data-label" style="margin-bottom: 15px;">Affidabilità Commerciale</div>
+                    <div class="score-circle">A</div>
+                    <strong style="color: var(--success); font-size: 18px;">Rischio Basso</strong>
+                </div>
+                <div>
+                    <p style="margin-bottom: 10px;">L'azienda presenta una struttura finanziaria solida. Il fatturato dell'ultimo esercizio risulta in crescita del +12%.</p>
+                    <div class="data-item" style="margin-bottom: 10px;">
+                        <span class="data-label">Fido Commerciale Consigliato</span>
+                        <span class="data-value" style="font-size: 20px;">€ 150.000,00</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Ultimo Bilancio Depositato</span>
+                        <span class="data-value">Anno 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">3. Eventi Negativi e Pregiudizievoli</h2>
+            <div class="card" style="background: #F8FAFC;">
+                <table style="margin-top: 0;">
+                    <tr>
+                        <td style="width: 70%;"><strong>Protesti (Ultimi 5 anni)</strong></td>
+                        <td style="color: var(--success); font-weight: bold;">Nessun evento riscontrato (0)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Procedure Concorsuali (Fallimenti, ecc.)</strong></td>
+                        <td style="color: var(--success); font-weight: bold;">Nessun evento riscontrato (0)</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom: none;"><strong>Pregiudizievoli di Conservatoria (Ipoteche legali)</strong></td>
+                        <td style="border-bottom: none; color: var(--success); font-weight: bold;">Nessun evento riscontrato (0)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: var(--text-light); font-size: 12px; margin-top: 50px; border-top: 1px solid var(--border); padding-top: 20px;">
+            Documento generato telematicamente tramite i servizi API di integrazione con le banche dati ufficiali. <br>Le informazioni contenute hanno carattere riservato.
+        </div>
+    </div>
+</body>
+</html>

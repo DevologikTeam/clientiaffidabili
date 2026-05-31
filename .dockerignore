@@ -1,0 +1,23 @@
+# ClientiAffidabili.it Docker build context hygiene
+# Keep host/Windows artifacts out of Linux builder stages. pnpm node_modules contains
+# symlinks/shims that can break nest/next inside Docker when copied from the host.
+node_modules
+**/node_modules
+.pnpm-store
+.next
+**/.next
+dist
+**/dist
+coverage
+**/coverage
+playwright-report
+test-results
+artifacts/qa/*.log
+artifacts/qa/*latest*.json
+*.tsbuildinfo
+.DS_Store
+.git
+.gitignore
+.env
+.env.*
+!.env.example

@@ -1,0 +1,47 @@
+{
+  "name": "@clientiaffidabili/web",
+  "version": "0.75.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "node ../../scripts/qa-design-system.js",
+    "qa:design-system": "node ../../scripts/qa-design-system.js",
+    "qa:public-funnel-design": "node ../../scripts/qa-public-funnel-design.js",
+    "qa:service-catalog-pricing-design": "node ../../scripts/qa-service-catalog-pricing-design.js",
+    "qa:service-catalog-pricing-development": "node ../../scripts/qa-service-catalog-pricing-development.js",
+    "qa:checkout-billing-development": "node ../../scripts/qa-checkout-billing-development.js",
+    "qa:report-composer-design": "node ../../scripts/qa-report-composer-design.js",
+    "qa:customer-dashboard-analysis": "node ../../scripts/qa-customer-dashboard-analysis.js",
+    "qa:customer-dashboard-design": "node ../../scripts/qa-customer-dashboard-design.js",
+    "qa:customer-dashboard-development": "node ../../scripts/qa-customer-dashboard-development.js",
+    "qa:tag-manager-clarity-analysis": "node scripts/qa-tag-manager-clarity-analysis.js",
+    "release:tag-manager-clarity-analysis-check": "node scripts/qa-tag-manager-clarity-analysis.js && node scripts/qa-source-syntax-smoke.js",
+    "qa:tag-manager-clarity-design": "node scripts/qa-tag-manager-clarity-design.js",
+    "release:tag-manager-clarity-design-check": "node scripts/qa-tag-manager-clarity-design.js && node scripts/qa-source-syntax-smoke.js",
+    "qa:tag-manager-clarity-development": "node scripts/qa-tag-manager-clarity-development.js",
+    "release:tag-manager-clarity-development-check": "node scripts/qa-tag-manager-clarity-development.js && node scripts/qa-source-syntax-smoke.js"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "@tiptap/react": "^3.0.0",
+    "@tiptap/pm": "^3.0.0",
+    "@tiptap/starter-kit": "^3.0.0",
+    "@tiptap/extension-link": "^3.0.0",
+    "@tiptap/extension-placeholder": "^3.0.0",
+    "@clientiaffidabili/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0",
+    "typescript": "^5.5.0"
+  }
+}

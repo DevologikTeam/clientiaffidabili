@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Area Riservata - ClientiAffidabili.it</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><div class="logo-icon">✓</div>Clienti<span>Affidabili.it</span></a>
+            <div class="nav-actions">
+                <span style="font-weight: 500; margin-right: 15px;">Ciao, Utente Demo</span>
+                <a href="index.html" class="btn btn-outline" style="padding: 5px 15px; font-size: 14px;">Esci</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container dashboard-layout">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" class="active">I Miei Documenti</a></li>
+                <li><a href="servizi.html">Nuova Richiesta</a></li>
+                <li><a href="#">Fatture e Pagamenti</a></li>
+                <li><a href="#">Profilo Account</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Archivio Report e Visure</h2>
+            <p style="color: var(--text-light); margin-bottom: 20px;">Tutti i documenti evasi sono disponibili per il download e la consultazione per 6 mesi.</p>
+            
+            <div id="success-banner" style="display:none; background: #D1FAE5; color: #065F46; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+                ✓ Documento generato con successo! Lo trovi nella tabella sottostante.
+            </div>
+
+            <div class="card" style="padding: 0; overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Servizio</th>
+                            <th>Soggetto / Rif.</th>
+                            <th>Stato</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oggi</td>
+                            <td><strong>Report Azienda Top</strong></td>
+                            <td>Acme Italia S.p.A.</td>
+                            <td><span class="badge badge-success">Completato</span></td>
+                            <td>
+                                <a href="report_azienda.html" target="_blank" class="btn btn-primary" style="padding: 5px 10px; font-size: 13px;">Apri HTML</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ieri</td>
+                            <td><strong>Report Patrimoniale Persona</strong></td>
+                            <td>Mario Rossi (RSSMRA...)</td>
+                            <td><span class="badge badge-success">Completato</span></td>
+                            <td>
+                                <a href="report_persona.html" target="_blank" class="btn btn-primary" style="padding: 5px 10px; font-size: 13px;">Apri HTML</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20/04/2026</td>
+                            <td><strong>Visura Camerale Ordinaria</strong></td>
+                            <td>Tech Solutions S.R.L.</td>
+                            <td><span class="badge badge-success">Completato</span></td>
+                            <td>
+                                <a href="#" onclick="alert('Demo: Report non implementato in questo mockup.')" class="btn btn-outline" style="padding: 5px 10px; font-size: 13px;">Scarica PDF</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        if(window.location.search.includes('new=true')) {
+            document.getElementById('success-banner').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

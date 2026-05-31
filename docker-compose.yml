@@ -1,0 +1,70 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-clientiaffidabili}
+      POSTGRES_USER: ${POSTGRES_USER:-clientiaffidabili}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_local}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-clientiaffidabili} -d ${POSTGRES_DB:-clientiaffidabili}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      APP_URL: ${APP_URL:-http://localhost:3000}
+      API_URL: ${API_URL:-http://localhost:3001}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://${POSTGRES_USER:-clientiaffidabili}:${POSTGRES_PASSWORD:-change_me_local}@postgres:5432/${POSTGRES_DB:-clientiaffidabili}}
+      DATABASE_SYNCHRONIZE: ${DATABASE_SYNCHRONIZE:-true}
+      DATABASE_LOGGING: ${DATABASE_LOGGING:-false}
+      JWT_SECRET: ${JWT_SECRET:-local_preflight_jwt_secret_change_me}
+      ENABLE_PROVIDER_CALLS: ${ENABLE_PROVIDER_CALLS:-false}
+      ENABLE_CHECKOUT: ${ENABLE_CHECKOUT:-false}
+      ENABLE_DEMO_DATA: ${ENABLE_DEMO_DATA:-false}
+    ports:
+      - "3001:3001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:3001/health').then((res)=>process.exit(res.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${PUBLIC_API_URL:-http://localhost:3001}
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:3000/healthz').then((res)=>process.exit(res.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  postgres-data:

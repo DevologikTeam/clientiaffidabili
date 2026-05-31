@@ -1,0 +1,22 @@
+{
+  "sprint": "M20-S",
+  "version": "0.71.0",
+  "createdAt": "2026-05-30T00:00:00.000Z",
+  "note": "Scaffold budget statico. Lighthouse/axe/browser reali devono essere eseguiti in ambiente con pnpm, dipendenze e browser installati.",
+  "routes": ["/", "/servizi", "/prezzi", "/checkout", "/guide", "/garanzia-operativa", "/api"],
+  "budgets": {
+    "lcpMobileMs": 2800,
+    "lcpDesktopMs": 2000,
+    "cls": 0.1,
+    "inpMs": 200,
+    "cssKnownWarnings": 0
+  },
+  "staticGates": [
+    "public metadata helpers",
+    "sensitive noindex layouts",
+    "accessible mobile menu attributes",
+    "semantic pricing table",
+    "checkout field help and confirmation copy",
+    "no align-items:end warning"
+  ]
+}

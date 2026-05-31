@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-05-31T15:14:27.299Z",
+  "status": "passed",
+  "guardedRuntimeErrors": [
+    "API container must not restart with MODULE_NOT_FOUND reflect-metadata",
+    "API runner must install/copy production pnpm dependencies instead of relying on builder node_modules symlinks",
+    "Web container must not restart with MODULE_NOT_FOUND /app/apps/web/server.js",
+    "Web container must not restart with MODULE_NOT_FOUND next from /app/server.js",
+    "Web root standalone server.js must have next resolvable at /app/node_modules or through NODE_PATH",
+    "Web runner must support both root and monorepo Next standalone server.js locations",
+    "Next standalone static/public assets must be copied for both possible runtime layouts",
+    "Web runner symlink fix must be idempotent and must not fail with ln: File exists",
+    "Local Windows preflight must not run standalone build that fails with EPERM symlink",
+    "Docker builder must not copy pnpm node_modules from another stage and then fail with MODULE_NOT_FOUND for nest/next CLI binaries",
+    "Docker build context must exclude host node_modules/.next/dist so COPY . . cannot overwrite Linux pnpm shims with Windows artifacts",
+    "Coolify preflight must not crash API on missing platform_settings table in an empty local Postgres volume",
+    "Web container healthcheck must target /healthz with Node fetch and not the public homepage via wget"
+  ],
+  "scanned": {
+    "apiDockerfileBytes": 1262,
+    "webDockerfileBytes": 2462,
+    "apiHasReflectMetadataDependency": true,
+    "webUsesStandalone": true
+  },
+  "warnings": [],
+  "failures": []
+}

@@ -1,0 +1,17 @@
+# Design Documentation Index
+
+Questa cartella contiene la documentazione progressiva del design system e della UX di ClientiAffidabili.it.
+
+## Sequenza consigliata
+
+1. `01_BRAND_IDENTITY_AUDIT.md`
+2. `02_VISUAL_DIRECTION_DECISION.md`
+3. `03_COMPONENT_INVENTORY_ANALYSIS.md`
+4. `04_ACCESSIBILITY_AND_QA_BASELINE.md`
+5. `05_CONTENT_TONE_AND_MICROCOPY_ANALYSIS.md`
+6. `06_DESIGN_TOKENS_BLUEPRINT.md`
+7. `07_COMPONENT_BLUEPRINT.md`
+8. `08_LAYOUT_AND_RESPONSIVE_BLUEPRINT.md`
+9. `09_FORM_STATES_AND_CHECKOUT_UX.md`
+10. `10_UI_CONTENT_GOVERNANCE.md`
+11. `11_DESIGN_SYSTEM_QA_CHECKLIST.md`

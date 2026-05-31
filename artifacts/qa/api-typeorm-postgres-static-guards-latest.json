@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-05-31T15:14:27.514Z",
+  "status": "passed",
+  "guardedRuntimeErrors": [
+    "DataTypeNotSupportedError: Data type Object in SupportTicket.category is not supported by postgres",
+    "TypeORM columns typed with TypeScript unions/type aliases/indexed access must not rely on reflect-metadata inference"
+  ],
+  "scanned": {
+    "entityFiles": 74,
+    "riskyColumnCount": 0
+  },
+  "warnings": [],
+  "failures": []
+}

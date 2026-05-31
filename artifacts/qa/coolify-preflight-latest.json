@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-05-31T14:56:24.635Z",
+  "status": "passed",
+  "preflightTarget": "local",
+  "composeFile": "docker-compose.yml",
+  "apiHealthUrl": "http://localhost:3001/health",
+  "webHealthUrl": "http://localhost:3000/healthz",
+  "healthCheckMode": "both",
+  "databaseSynchronize": "true",
+  "logFile": "artifacts/qa/coolify-preflight-latest.log"
+}

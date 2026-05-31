@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - ClientiAffidabili.it</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><div class="logo-icon">✓</div>Clienti<span>Affidabili.it</span></a>
+        </div>
+    </header>
+
+    <div class="container" style="padding: 40px 20px; max-width: 800px;">
+        <h2>Completa la Richiesta</h2>
+        <p style="margin-bottom: 30px;">Inserisci i dati per l'intestazione e procedi al pagamento sicuro.</p>
+
+        <div class="card" style="margin-bottom: 30px; background: #F8FAFC;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Riepilogo Ordine</h3>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 10px;">
+                <strong id="cart-item-name">Report Azienda Top</strong>
+                <span id="cart-item-price">€9.60</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 10px; font-size: 14px;">
+                <span>IVA (22%)</span>
+                <span id="cart-item-tax">€2.11</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 18px; margin-top: 10px;">
+                <span>Totale Da Pagare</span>
+                <span id="cart-total" style="color: var(--primary);">€11.71</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-bottom: 20px; font-size: 18px;">Dati Ricerca & Pagamento</h3>
+            <div class="form-group">
+                <label>Soggetto da Ricercare (Ragione Sociale, P.IVA o C.F.)</label>
+                <input type="text" class="form-control" placeholder="Es. Mario Rossi / Acme S.p.A." value="Acme Italia S.p.A.">
+            </div>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Numero Carta di Credito</label>
+                    <input type="text" class="form-control" placeholder="**** **** **** 4242" value="**** **** **** 4242">
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Scadenza</label>
+                        <input type="text" class="form-control" placeholder="MM/YY" value="12/28">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" class="form-control" placeholder="123" value="***">
+                    </div>
+                </div>
+            </div>
+            <button onclick="processPayment()" class="btn btn-success" style="width: 100%; font-size: 16px; padding: 15px; margin-top: 15px;">Conferma e Paga</button>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to adjust names based on URL params to make it feel real
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+        
+        if(type === 'persona') {
+            document.getElementById('cart-item-name').innerText = 'Report Patrimoniale Persona';
+            document.getElementById('cart-item-price').innerText = '€3.60';
+            document.getElementById('cart-item-tax').innerText = '€0.79';
+            document.getElementById('cart-total').innerText = '€4.39';
+        } else if (type === 'catasto') {
+            document.getElementById('cart-item-name').innerText = 'Visura Catastale Immobile';
+            document.getElementById('cart-item-price').innerText = '€1.90';
+            document.getElementById('cart-item-tax').innerText = '€0.42';
+            document.getElementById('cart-total').innerText = '€2.32';
+        }
+
+        function processPayment() {
+            const btn = document.querySelector('.btn-success');
+            btn.innerText = 'Elaborazione in corso...';
+            btn.style.opacity = '0.7';
+            setTimeout(() => {
+                alert('Pagamento completato con successo! Il sistema sta generando il report.');
+                window.location.href = 'dashboard.html?new=true';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

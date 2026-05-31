@@ -1,0 +1,113 @@
+{
+  "id": "local-m19s-1780238421298",
+  "generatedAt": "2026-05-31T14:40:21.298Z",
+  "providerMode": "mock",
+  "status": "blocked",
+  "results": [
+    {
+      "scenarioKey": "stripe-payment-success",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "73abb5ec746ac2b2a5522fd97c18fa706742e7546e01911c40c47fcf5149d944",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "stripe-payment-failure",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "68b2950544e2532a76bb38ef0c716b7f37c07170f8b79860b65fa6c7f70205e1",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "stripe-refund-full",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "10394d647b1b4fa5119ddda710330b97d06d4733db0b279e3d0f4f7099b7d829",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "paypal-payment-success",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "ef6b86c9430e8896876633093cb6735a82181a85ff67d9c9181075855a430465",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "openapi-provider-post-payment",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "843add2b080efcc44e433cb74b450d4ea3b11cb7960fe884edd7e84474156847",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "openapi-provider-failure-ledger",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "b7ae07efcf4c05b32ff746db0331ab5e60af3ab7142c8c8b171fa85f82c9481f",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "email-pdf-secure-link",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "de063049e33d15d0341a5457098b18649866d6a2118252595785ca6300fd76ef",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "report-pdf-access-control",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "a350b8de658719eef77370caee8984289a2e1b84ad1171fee5a8f98d953a218a",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "openai-disabled-by-default",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "c4d44de18251710bd923ce5fc6b732b3018f36906a178507f2b0a4a470479e09",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "auth-password-reset-email",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "4cb7f7bbc505a6783c3b7f9e047699bed8c7cebaf159e93fadedcea9e714eae5",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "customer-dashboard-fallback",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "1aa738fcc3f457f72aaa735dbc18de3e88a819ad200170e2616d92100d68217b",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "partner-api-sandbox-idempotency",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "831bacc18c92037f8550ffffa77c929eeadc1da650c5d3cc80fc5acd11257dca",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "seo-cms-publication-guardrail",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "f91e834dc77892dbfffe148c95cfcf779a48dc3edf3f4cfeacdc924295a18e6e",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    },
+    {
+      "scenarioKey": "docker-coolify-smoke",
+      "status": "blocked",
+      "providerMode": "manual",
+      "evidenceSha256": "587ab26ca6d02def599ea767f17781803ea90b0ce4cd8d71f5e21202d31e0303",
+      "safeMessage": "Manual Docker/Coolify smoke evidence required before RC."
+    },
+    {
+      "scenarioKey": "security-secret-scan",
+      "status": "passed",
+      "providerMode": "mock",
+      "evidenceSha256": "6f5a231744d85c72584c26729ca1f14850fa3d676fa5ca96d803b28f1e0163f8",
+      "safeMessage": "Mock-first scenario executed without live provider calls."
+    }
+  ]
+}

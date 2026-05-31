@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-05-31T15:14:27.396Z",
+  "status": "passed",
+  "guardedPreflight": [
+    "pnpm install when node_modules is missing",
+    "pnpm API build before Docker",
+    "pnpm web build before Docker",
+    "local web build disables Next standalone to avoid Windows symlink EPERM",
+    "Coolify compose no-cache api/web build",
+    "Docker build context excludes host node_modules and .next artifacts",
+    "Docker Compose up and ps inspection",
+    "Local preflight publishes host ports and verifies browser reachability",
+    "Strict preflight keeps Coolify-like compose without host port assumptions",
+    "API and web health checks from inside containers",
+    "Web health checks target dedicated /healthz route using Node fetch instead of wget/root page",
+    "DATABASE_SYNCHRONIZE=true for empty local preflight database schema creation",
+    "HEALTH_CHECK_MODE=both validates both container and host endpoints in local mode",
+    "api/web logs captured for debugging"
+  ],
+  "warnings": [],
+  "failures": []
+}

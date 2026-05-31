@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Patrimoniale Persona - Mario Rossi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { background: #E2E8F0; padding: 20px 0; }
+        @media print { body { background: white; padding: 0; } .btn-print { display: none; } }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button class="btn btn-primary btn-print" onclick="window.print()">Stampa / Salva come PDF</button>
+    </div>
+
+    <div class="report-container">
+        <div class="report-header">
+            <div>
+                <div class="logo" style="margin-bottom: 10px;"><div class="logo-icon">✓</div>Clienti<span>Affidabili.it</span></div>
+                <h1 class="report-title">Report Patrimoniale Persona</h1>
+            </div>
+            <div class="report-meta">
+                Data Evasione: <strong>29/05/2026</strong><br>
+                Soggetto: <strong>Fisico</strong>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">1. Dati Anagrafici Soggetto</h2>
+            <div class="card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="data-label">Nome e Cognome</span>
+                        <span class="data-value" style="font-size: 18px; color: var(--primary);">MARIO ROSSI</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Codice Fiscale</span>
+                        <span class="data-value">RSSMRA80A01H501U</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Data e Luogo di Nascita</span>
+                        <span class="data-value">01/01/1980 - Roma (RM)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Verifica Codice Fiscale</span>
+                        <span class="data-value" style="color: var(--success);">Valido (Allineato Agenzia Entrate)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">2. Cariche e Partecipazioni Societarie</h2>
+            <div class="card">
+                <p style="margin-bottom: 15px;">Il soggetto risulta avere attive le seguenti cariche in imprese italiane:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Carica</th>
+                            <th>Azienda</th>
+                            <th>P.IVA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amministratore Unico</td>
+                            <td>Rossi Consulting S.r.l.</td>
+                            <td>11223344556</td>
+                        </tr>
+                        <tr>
+                            <td>Socio (30%)</td>
+                            <td>Edilizia Moderna S.p.A.</td>
+                            <td>99887766554</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">3. Proprietà Immobiliari (Catasto Nazionale)</h2>
+            <div class="card" style="border-left: 4px solid var(--secondary);">
+                <div class="data-item" style="margin-bottom: 15px;">
+                    <span class="data-label">Esito Ricerca</span>
+                    <span class="data-value">Trovate N. 2 occorrenze a livello nazionale.</span>
+                </div>
+                
+                <div style="background: #F8FAFC; padding: 15px; border: 1px solid var(--border); margin-bottom: 10px; border-radius: 4px;">
+                    <strong>Immobile 1 - Fabbricato (A/2 - Abitazione Civile)</strong><br>
+                    <span style="font-size: 14px; color: var(--text-light);">Ubicazione: Roma (RM) - Via Verdi 15</span><br>
+                    <span style="font-size: 14px; color: var(--text-light);">Dati Catastali: Foglio 123, Particella 456, Subalterno 7</span><br>
+                    <span style="font-size: 14px;">Quota proprietà: 100%</span>
+                </div>
+
+                <div style="background: #F8FAFC; padding: 15px; border: 1px solid var(--border); border-radius: 4px;">
+                    <strong>Immobile 2 - Garage/Autorimessa (C/6)</strong><br>
+                    <span style="font-size: 14px; color: var(--text-light);">Ubicazione: Roma (RM) - Via Verdi 15</span><br>
+                    <span style="font-size: 14px; color: var(--text-light);">Dati Catastali: Foglio 123, Particella 456, Subalterno 8</span><br>
+                    <span style="font-size: 14px;">Quota proprietà: 50%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-block">
+            <h2 class="section-title">4. Eventi Negativi (Protesti e Pregiudizievoli)</h2>
+            <div class="card">
+                <div style="padding: 15px; background: #FEF2F2; border: 1px solid #FECACA; border-radius: 6px; color: #991B1B;">
+                    <strong style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 20px;">⚠️</span> Attenzione: Rilevati Eventi Negativi
+                    </strong>
+                    <p style="margin-top: 10px; font-size: 14px;">È stata rilevata <strong>N. 1 Ipoteca Legale/Giudiziale</strong> a carico del soggetto in data 14/05/2023 presso la Conservatoria dei Registri Immobiliari di Roma.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: var(--text-light); font-size: 12px; margin-top: 50px; border-top: 1px solid var(--border); padding-top: 20px;">
+            Documento redatto in base alle informazioni estratte in tempo reale dalle banche dati pubbliche alla data della richiesta.<br>
+            ClientiAffidabili.it garantisce unicamente la conformità dei dati rispetto alle fonti.
+        </div>
+    </div>
+</body>
+</html>

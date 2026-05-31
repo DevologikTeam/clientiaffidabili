@@ -1,0 +1,36 @@
+export const providerIntegrationDesign = {
+  sprint: 'M5-P Provider Integration Design',
+  version: '0.15.0',
+  customerPrinciple: 'Il cliente compra una verifica leggibile, non una chiamata API tecnica.',
+  runtimePrinciples: [
+    'provider call solo post-payment',
+    'adapter contract-first',
+    'mapping servizi versionato',
+    'cost snapshot obbligatorio',
+    'raw payload mai esposto al cliente',
+    'normalizzazione prima del report',
+    'retry conservativo',
+    'admin queue con azioni sicure',
+  ],
+  adminQueues: [
+    'in_attesa_provider',
+    'da_verificare',
+    'errori_provider',
+    'costo_margine',
+    'compliance_review',
+  ],
+  customerStatuses: [
+    'Pagamento ricevuto',
+    'Verifica in preparazione',
+    'Dati in elaborazione',
+    'Report pronto',
+    'Controllo operativo in corso',
+  ],
+  blockedBehaviours: [
+    'nessuna credenziale provider nel frontend',
+    'nessun raw payload in UI cliente',
+    'nessun retry infinito',
+    'nessuna produzione provider senza flag esplicito',
+    'nessun claim assoluto di affidabilità',
+  ],
+} as const;
