@@ -1,3 +1,7 @@
+## 0.75.5 - Browser Permission Prompt Guard
+
+- Disabilitati prompt browser automatici legati a credenziali/passkey sulle pagine pubbliche.
+
 
 ## 0.75.4 - Test Mode Commerce Visibility
 

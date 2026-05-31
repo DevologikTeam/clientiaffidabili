@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checkedAt": "2026-05-31T17:22:00.033Z",
+  "checkedAt": "2026-05-31T19:14:31.558Z",
   "checkedFiles": [
     "apps/web/lib/runtime/commerce-mode.ts",
     "apps/web/components/commerce/TestModeNotice.tsx",
@@ -12,7 +12,8 @@
     "apps/web/app/checkout/page.tsx",
     "apps/web/components/catalog/CatalogServiceCard.tsx",
     "apps/web/app/globals.css",
-    "docs/releases/0.75.4.md"
+    "docs/releases/0.75.4.md",
+    "docs/releases/0.75.5.md"
   ],
   "failures": []
 }

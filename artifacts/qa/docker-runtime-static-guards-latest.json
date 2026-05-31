@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T17:22:09.305Z",
+  "generatedAt": "2026-05-31T19:14:32.194Z",
   "status": "passed",
   "guardedRuntimeErrors": [
     "API container must not restart with MODULE_NOT_FOUND reflect-metadata",

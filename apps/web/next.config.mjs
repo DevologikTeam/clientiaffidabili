@@ -14,6 +14,29 @@ const nextConfig = {
   transpilePackages: ['@clientiaffidabili/shared'],
   images: {
     unoptimized: true
+  },
+  async headers() {
+    const browserPermissionPolicy = [
+      'publickey-credentials-get=()',
+      'identity-credentials-get=()',
+      'payment=()',
+      'usb=()',
+      'serial=()',
+      'hid=()',
+      'bluetooth=()',
+      'local-fonts=()'
+    ].join(', ');
+
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Permissions-Policy', value: browserPermissionPolicy },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }
+        ]
+      }
+    ];
   }
 };
 

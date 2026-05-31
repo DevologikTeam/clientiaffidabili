@@ -1,3 +1,7 @@
+## Current package: v0.75.5
+
+Patch browser-permission guard: nessun prompt credenziali/app su pagine pubbliche; QA dedicato incluso.
+
 # ClientiAffidabili.it Foundation
 
 Versione corrente: 0.75.3

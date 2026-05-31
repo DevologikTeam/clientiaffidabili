@@ -1,3 +1,7 @@
+## Current package: v0.75.5
+
+Patch browser-permission guard: Permissions-Policy, auth autocomplete sicuro e QA dedicato.
+
 # ClientiAffidabili.it Project Manifest
 
 Versione corrente: 0.75.3

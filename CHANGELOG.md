@@ -1,3 +1,10 @@
+## 0.75.5 - Browser Permission Prompt Guard
+
+- Disabilitati prompt browser automatici legati a passkey/WebAuthn/FedCM sulle pagine pubbliche.
+- Aggiunti header `Permissions-Policy` restrittivi.
+- Resi espliciti gli autocomplete dei form auth senza `webauthn`.
+- Aggiunto QA `qa-browser-permission-public-guards`.
+
 
 ## 0.75.4 - Test Mode Commerce Visibility
 

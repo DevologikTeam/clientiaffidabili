@@ -29,6 +29,7 @@ const files = [
   '.env.example',
   'docs/public-copy/03_CONTACT_FORM_SENIOR_UX_REVIEW.md',
   'docs/releases/0.75.3.md',
+  'docs/releases/0.75.5.md',
 ];
 files.forEach(assertFile);
 
@@ -79,7 +80,8 @@ for (const compose of ['docker-compose.yml', 'docker-compose.coolify.yml']) {
 assertIncludes('.env.example', 'INTERNAL_API_URL=http://api:3001');
 
 const pkg = read('package.json');
-for (const token of ['"version": "0.75.4"', 'qa:contact-form-design', 'node scripts/qa-contact-form-design.js']) {
+if (!/\"version\": \"0\.75\.([3-9]|[1-9][0-9]+)\"/.test(pkg)) failures.push('package.json missing compatible version >= 0.75.3');
+for (const token of ['qa:contact-form-design', 'node scripts/qa-contact-form-design.js']) {
   if (!pkg.includes(token)) failures.push(`package.json missing ${token}`);
 }
 

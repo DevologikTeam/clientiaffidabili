@@ -23,6 +23,7 @@ const files = [
   'apps/web/components/catalog/CatalogServiceCard.tsx',
   'apps/web/app/globals.css',
   'docs/releases/0.75.4.md',
+  'docs/releases/0.75.5.md',
 ];
 files.forEach(assertFile);
 
@@ -61,7 +62,8 @@ for (const token of [
 ]) assertIncludes('apps/web/app/globals.css', token);
 
 const pkg = read('package.json');
-for (const token of ['"version": "0.75.4"', 'qa:test-mode-commerce-visibility', 'node scripts/qa-test-mode-commerce-visibility.js']) {
+if (!/\"version\": \"0\.75\.(4|5|[6-9]|[1-9][0-9]+)\"/.test(pkg)) failures.push('package.json missing compatible version >= 0.75.4');
+for (const token of ['qa:test-mode-commerce-visibility', 'node scripts/qa-test-mode-commerce-visibility.js']) {
   if (!pkg.includes(token)) failures.push(`package.json missing ${token}`);
 }
 
