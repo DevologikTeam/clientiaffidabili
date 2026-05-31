@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 function apiBaseUrl() {
-  return process.env.INTERNAL_API_URL ?? process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001';
+  return process.env.INTERNAL_API_URL ?? 'http://api:3001';
 }
 
 function redirectTo(request: NextRequest, outcome: 'success' | 'error') {

@@ -1,4 +1,4 @@
-## Current package: v0.75.5
+## Current package: v0.75.6
 
 Patch browser-permission guard: Permissions-Policy, auth autocomplete sicuro e QA dedicato.
 
@@ -50,3 +50,8 @@ Patch build/type guard: `EducationMetaStrip` usa mappe esaustive tipizzate e il 
 ## v0.75.4
 
 Test mode commerce visibility: public pages and checkout clearly show when checkout is disabled for local/Coolify preflight environments.
+
+
+## v0.75.6
+
+Local Network Access Prompt Fix: browser public pages now use same-origin Next API routes and server-side `INTERNAL_API_URL` proxying.

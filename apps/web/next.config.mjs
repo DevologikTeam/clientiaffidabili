@@ -19,6 +19,7 @@ const nextConfig = {
     const browserPermissionPolicy = [
       'publickey-credentials-get=()',
       'identity-credentials-get=()',
+      'local-network-access=()',
       'payment=()',
       'usb=()',
       'serial=()',

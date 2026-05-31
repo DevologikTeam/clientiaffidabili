@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checkedAt": "2026-05-31T19:14:31.558Z",
+  "checkedAt": "2026-05-31T19:34:04.973Z",
   "checkedFiles": [
     "apps/web/lib/runtime/commerce-mode.ts",
     "apps/web/components/commerce/TestModeNotice.tsx",

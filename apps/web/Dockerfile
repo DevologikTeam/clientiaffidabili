@@ -9,8 +9,6 @@ COPY packages/shared/package.json packages/shared/package.json
 RUN pnpm install --prod --filter @clientiaffidabili/web... --frozen-lockfile=false
 
 FROM base AS builder
-ARG NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 COPY package.json pnpm-workspace.yaml ./
 COPY apps/web/package.json apps/web/package.json
 COPY packages/shared/package.json packages/shared/package.json

@@ -109,8 +109,10 @@ export function pushCampaignEvent(name: CampaignEventName, payload: CampaignEven
 
 export async function fetchExternalTrackingConfig(pathname: string): Promise<ExternalTrackingConfig> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
-    const response = await fetch(`${baseUrl}/analytics/public-config?pathname=${encodeURIComponent(pathname)}`, { cache: 'no-store' });
+    // Browser requests must stay same-origin. Never call localhost, 127.0.0.1,
+    // private IPs or Docker service names from public pages: Chrome can show the
+    // Local Network Access permission prompt ("other apps and services on this device").
+    const response = await fetch(`/api/analytics/public-config?pathname=${encodeURIComponent(pathname)}`, { cache: 'no-store' });
     if (!response.ok) return defaultExternalTrackingConfig;
     const data = await response.json();
     return { ...defaultExternalTrackingConfig, ...data };

@@ -1,3 +1,11 @@
+
+## v0.75.6 — Local Network Access Prompt Fix
+
+- Rimosse chiamate browser dirette verso API locali/interne.
+- Aggiunta route same-origin `/api/analytics/public-config`.
+- Rimosso `NEXT_PUBLIC_API_URL` da Docker/compose web.
+- Aggiunto `qa-local-network-access-guards`.
+
 ## 0.75.5 - Browser Permission Prompt Guard
 
 - Disabilitati prompt browser automatici legati a passkey/WebAuthn/FedCM sulle pagine pubbliche.

@@ -57,7 +57,8 @@ for (const token of ['searchParams', 'inviata', 'errore', 'Vedi i servizi', 'Con
 for (const forbidden of ['admin', 'provider', 'debug', 'payload', 'workflow']) assertNotIncludes(page, forbidden);
 
 const route = 'apps/web/app/api/sales-crm/contact-messages/route.ts';
-for (const token of ['INTERNAL_API_URL', 'NEXT_PUBLIC_API_URL', '/sales-crm/contact-messages', 'NextResponse.redirect', 'privacyAccepted', 'formData.get']) assertIncludes(route, token);
+for (const token of ['INTERNAL_API_URL', '/sales-crm/contact-messages', 'NextResponse.redirect', 'privacyAccepted', 'formData.get']) assertIncludes(route, token);
+if (route.includes('NEXT_PUBLIC_API_URL')) failures.push('Contact route must not fall back to NEXT_PUBLIC_API_URL; public browser API URLs can trigger Local Network Access prompts.');
 
 const field = 'apps/web/components/ds/Field.tsx';
 for (const token of ['wrapperClassName?: string', 'fieldClassName', "['ca-field'"]) assertIncludes(field, token);

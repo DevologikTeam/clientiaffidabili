@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T19:14:32.194Z",
+  "generatedAt": "2026-05-31T19:34:05.655Z",
   "status": "passed",
   "guardedRuntimeErrors": [
     "API container must not restart with MODULE_NOT_FOUND reflect-metadata",
@@ -18,7 +18,7 @@
   ],
   "scanned": {
     "apiDockerfileBytes": 1262,
-    "webDockerfileBytes": 2462,
+    "webDockerfileBytes": 2393,
     "apiHasReflectMetadataDependency": true,
     "webUsesStandalone": true
   },

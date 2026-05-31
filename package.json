@@ -1,6 +1,6 @@
 {
   "name": "clientiaffidabili-platform",
-  "version": "0.75.5",
+  "version": "0.75.6",
   "private": true,
   "packageManager": "pnpm@9.0.0",
   "scripts": {
@@ -123,7 +123,7 @@
     "qa:rc-hardening-development": "node scripts/qa-rc-hardening-development.js",
     "release:rc-hardening-development-check": "node scripts/qa-web-build-static-guards.js && node scripts/rc-hardening-production-env-guard.js && node scripts/rc-hardening-gate-runner.js && node scripts/qa-rc-hardening-analysis.js && node scripts/qa-rc-hardening-design.js && node scripts/qa-rc-hardening-development.js && node scripts/qa-source-syntax-smoke.js && node scripts/security-secret-scan.js",
     "qa:web-build-static-guards": "node scripts/qa-web-build-static-guards.js",
-    "release:pre-zip-check": "node scripts/qa-browser-permission-public-guards.js && node scripts/qa-test-mode-commerce-visibility.js && node scripts/qa-contact-form-design.js && node scripts/qa-public-copy-trust-polish.js && node scripts/qa-git-flow-coolify.js && node scripts/qa-web-build-static-guards.js && node scripts/qa-docker-runtime-static-guards.js && node scripts/qa-coolify-preflight-static-guards.js && node scripts/qa-api-typeorm-postgres-static-guards.js && node scripts/qa-m20p-docker-build-fix-32.js && node scripts/qa-ux-seo-performance-accessibility-development.js && node scripts/qa-rc-hardening-development.js && node scripts/qa-source-syntax-smoke.js && node scripts/security-secret-scan.js",
+    "release:pre-zip-check": "node scripts/qa-local-network-access-guards.js && node scripts/qa-browser-permission-public-guards.js && node scripts/qa-test-mode-commerce-visibility.js && node scripts/qa-contact-form-design.js && node scripts/qa-public-copy-trust-polish.js && node scripts/qa-git-flow-coolify.js && node scripts/qa-web-build-static-guards.js && node scripts/qa-docker-runtime-static-guards.js && node scripts/qa-coolify-preflight-static-guards.js && node scripts/qa-api-typeorm-postgres-static-guards.js && node scripts/qa-m20p-docker-build-fix-32.js && node scripts/qa-ux-seo-performance-accessibility-development.js && node scripts/qa-rc-hardening-development.js && node scripts/qa-source-syntax-smoke.js && node scripts/security-secret-scan.js",
     "qa:docker-runtime-static-guards": "node scripts/qa-docker-runtime-static-guards.js",
     "qa:api-typeorm-postgres-static-guards": "node scripts/qa-api-typeorm-postgres-static-guards.js",
     "qa:coolify-preflight:static-guards": "node scripts/qa-coolify-preflight-static-guards.js",
@@ -136,7 +136,8 @@
     "qa:git-flow-coolify": "node scripts/qa-git-flow-coolify.js",
     "qa:contact-form-design": "node scripts/qa-contact-form-design.js",
     "qa:test-mode-commerce-visibility": "node scripts/qa-test-mode-commerce-visibility.js",
-    "qa:browser-permission-public-guards": "node scripts/qa-browser-permission-public-guards.js"
+    "qa:browser-permission-public-guards": "node scripts/qa-browser-permission-public-guards.js",
+    "qa:local-network-access-guards": "node scripts/qa-local-network-access-guards.js"
   },
   "devDependencies": {
     "typescript": "^5.5.0",
