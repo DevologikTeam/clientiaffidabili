@@ -1,6 +1,6 @@
-## v0.75.0 — Public Trust Copy, Logo & Layout Polish
+## v0.75.3 — Public Copy Type Guard Fix
 
-Stato aggiornato v0.75.0. Le superfici pubbliche principali sono state ripulite dal linguaggio interno/sviluppatore e riallineate a un messaggio cliente-finale: decisione commerciale, prezzo chiaro, fonti dichiarate, limiti espliciti e supporto. Il logo ora e visibile come pittogramma + wordmark testuale. Aggiunto QA statico dedicato per bloccare regressioni di copy pubblico.
+Stato aggiornato v0.75.3. Corretto il build blocker TypeScript introdotto dal cleanup copy pubblico: `EducationMetaStrip` non confronta piu valori legacy non presenti in `EducationIntent`, ma usa mappe esaustive tipizzate per intent e cluster. Rafforzato il QA copy pubblico per bloccare regressioni simili.
 
 Prossimi 5 sprint:
 
@@ -161,3 +161,8 @@ Prossimi 5 sprint:
 Stato aggiornato v0.71.0.
 
 Voce mantenuta per regression gate M20-S.
+
+
+## v0.75.3 note
+
+Patch copy cliente-finale e Git flow Coolify aggiunti: niente tassonomie interne nelle guide pubbliche, branch develop/main, tag versione e workflow webhook Coolify.

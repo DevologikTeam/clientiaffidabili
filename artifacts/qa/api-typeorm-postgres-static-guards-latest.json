@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T15:14:27.514Z",
+  "generatedAt": "2026-05-31T16:13:10.174Z",
   "status": "passed",
   "guardedRuntimeErrors": [
     "DataTypeNotSupportedError: Data type Object in SupportTicket.category is not supported by postgres",

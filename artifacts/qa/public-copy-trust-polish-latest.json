@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checkedAt": "2026-05-31T15:14:26.530Z",
+  "checkedAt": "2026-05-31T16:13:09.047Z",
   "checkedFiles": [
     "apps/web/app/page.tsx",
     "apps/web/app/servizi/page.tsx",
@@ -13,7 +13,10 @@
     "apps/web/components/launch-website/OperationalGuarantee.tsx",
     "apps/web/components/public-funnel/ComplianceNotice.tsx",
     "apps/web/lib/content.ts",
-    "apps/web/lib/launch-website/launch-website-runtime.ts"
+    "apps/web/lib/launch-website/launch-website-runtime.ts",
+    "apps/web/components/launch-website/SeoGeoGuideGrid.tsx",
+    "apps/web/components/customer-education/EducationMetaStrip.tsx",
+    "docs/public-copy/02_FINAL_CLIENT_COPY_AND_COMPETITOR_POSITIONING.md"
   ],
   "bannedPublicTerms": [
     "sito di lancio",
@@ -28,7 +31,9 @@
     "margine protetto",
     "marginalità",
     "payload",
-    "raw payload"
+    "raw payload",
+    "Intento:",
+    "providerCostHint: 'Nota interna"
   ],
   "failures": []
 }

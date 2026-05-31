@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-05-31T16:13:08.940Z",
+  "checkedFiles": [
+    "apps/web/app/contatti/page.tsx",
+    "apps/web/components/sales-crm/ContactCaptureForm.tsx",
+    "apps/web/components/ds/Field.tsx",
+    "apps/web/app/api/sales-crm/contact-messages/route.ts",
+    "apps/web/app/globals.css",
+    "docker-compose.yml",
+    "docker-compose.coolify.yml",
+    ".env.example",
+    "docs/public-copy/03_CONTACT_FORM_SENIOR_UX_REVIEW.md",
+    "docs/releases/0.75.3.md"
+  ],
+  "failures": []
+}

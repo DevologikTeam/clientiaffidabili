@@ -59,10 +59,10 @@ export const services: ServiceProduct[] = [
     price: '€14,90',
     bestFor: ['Primo controllo su nuovo cliente', 'Preventivi con pagamento differito', 'Fornitori non ancora qualificati'],
     requiredInputs: ['Ragione sociale o partita IVA', 'Finalità professionale della verifica', 'Email operativa per ricevere aggiornamenti'],
-    reportOutput: ['Anagrafica sintetica', 'Stato attività', 'Segnali iniziali', 'Sintesi decisionale'],
+    reportOutput: ['Anagrafica sintetica', 'Stato attività', 'Segnali iniziali', 'Sintesi per decidere'],
     decisionHelp: 'Aiuta a capire se procedere, chiedere dati aggiuntivi o passare a un controllo più approfondito.',
     complianceNote: 'Non sostituisce istruttoria creditizia, consulenza legale o valutazione bancaria.',
-    providerCostHint: 'Nota interna rimossa dalla UI pubblica: il cliente deve vedere valore, fonti, limiti e prezzo finale prima del pagamento.'
+    providerCostHint: 'Messaggio pubblico: prima del pagamento devono essere chiari valore, fonti, limiti e prezzo finale.'
   },
   {
     code: 'COMPANY_PRO',
@@ -70,15 +70,15 @@ export const services: ServiceProduct[] = [
     name: 'Check Affidabilità Pro',
     category: 'Risk intelligence',
     delivery: 'pochi minuti',
-    description: 'Report più completo con scoring, segnali di rischio, dati aziendali e soggetti collegati.',
+    description: 'Report più completo con segnali di attenzione, dati aziendali disponibili e soggetti collegati.',
     useCase: 'decidere se spedire merce, concedere credito o attivare una collaborazione.',
     price: '€24,90',
     bestFor: ['Ordini B2B rilevanti', 'Contratti ricorrenti', 'Team commerciali e amministrativi'],
     requiredInputs: ['Partita IVA o ragione sociale', 'Importo o contesto della decisione', 'Conferma finalità professionale lecita'],
-    reportOutput: ['Score sintetico', 'Segnali di rischio', 'Dati aziendali', 'Soggetti collegati', 'Prossima azione consigliata'],
+    reportOutput: ['Sintesi del livello di attenzione', 'Segnali di rischio', 'Dati aziendali', 'Soggetti collegati', 'Prossima azione consigliata'],
     decisionHelp: 'È il controllo consigliato: trasforma più segnali in una pagina di decisione leggibile.',
-    complianceNote: 'Lo score è indicativo e deve essere letto insieme alle informazioni disponibili e al contesto commerciale.',
-    providerCostHint: 'Nota interna rimossa dalla UI pubblica: evidenziare cosa viene controllato, non la struttura tecnica del servizio.'
+    complianceNote: 'Lo risultato è indicativo e deve essere letto insieme alle informazioni disponibili e al contesto della decisione.',
+    providerCostHint: 'Messaggio pubblico: evidenziare cosa viene controllato e quali limiti restano.'
   },
   {
     code: 'KYB_COMPLIANCE',
@@ -91,10 +91,10 @@ export const services: ServiceProduct[] = [
     price: '€49,90',
     bestFor: ['Fornitori strategici', 'Partner commerciali', 'Clienti ad alto valore o ad alto rischio'],
     requiredInputs: ['Partita IVA o identificativo azienda', 'Motivo della verifica', 'Ruolo del richiedente'],
-    reportOutput: ['Soggetti rilevanti', 'Titolare effettivo se disponibile', 'AML/PEP/sanctions dove applicabile', 'Sintesi compliance'],
+    reportOutput: ['Soggetti rilevanti', 'Titolare effettivo se disponibile', 'Controlli antiriciclaggio e liste rilevanti dove applicabile', 'Sintesi per decisioni prudenti'],
     decisionHelp: 'Aiuta a decidere se proseguire, sospendere o richiedere una revisione manuale.',
     complianceNote: 'Richiede copy prudente: non promettere certificazione definitiva o assenza totale di rischio.',
-    providerCostHint: 'Nota interna rimossa dalla UI pubblica: comunicare prudenza, fonti disponibili e limiti del controllo.'
+    providerCostHint: 'Messaggio pubblico: comunicare prudenza, fonti disponibili e limiti del controllo.'
   },
   {
     code: 'IBAN_CHECK',
@@ -110,7 +110,7 @@ export const services: ServiceProduct[] = [
     reportOutput: ['Validità formato', 'Banca/BIC se disponibile', 'Area SEPA', 'Esito operativo'],
     decisionHelp: 'Riduce errori prima di inserire o modificare coordinate di pagamento.',
     complianceNote: 'Non autorizza pagamenti e non certifica la titolarità economica del conto se la fonte non lo consente.',
-    providerCostHint: 'Nota interna rimossa dalla UI pubblica: comunicare rapidità del controllo e limiti informativi.'
+    providerCostHint: 'Messaggio pubblico: comunicare rapidità del controllo e limiti informativi.'
   },
   {
     code: 'EMAIL_PHONE_CHECK',
@@ -126,7 +126,7 @@ export const services: ServiceProduct[] = [
     reportOutput: ['Formato', 'Raggiungibilità tecnica', 'Indicazioni anti-abuso', 'Esito sintetico'],
     decisionHelp: 'Aiuta a separare lead verificabili da contatti incompleti o potenzialmente rischiosi.',
     complianceNote: 'Non usare per spam, profilazione invasiva o contatti senza base lecita.',
-    providerCostHint: 'Nota interna rimossa dalla UI pubblica: comunicare riduzione di errori operativi e uso lecito.'
+    providerCostHint: 'Messaggio pubblico: comunicare riduzione di errori operativi e uso lecito.'
   },
   {
     code: 'PERSON_LIGHT',
@@ -142,7 +142,7 @@ export const services: ServiceProduct[] = [
     reportOutput: ['Validazione dato', 'Anagrafica se disponibile', 'Segnali consentiti', 'Limiti del controllo'],
     decisionHelp: 'Aiuta a completare un controllo documentale senza trasformarlo in investigazione consumer.',
     complianceNote: 'Da comunicare con grande prudenza: evitare toni investigativi e richieste non giustificate.',
-    providerCostHint: 'Nota interna rimossa dalla UI pubblica: usare solo con finalità professionale lecita e proporzionata.'
+    providerCostHint: 'Messaggio pubblico: usare solo con finalità professionale lecita e proporzionata.'
   }
 ];
 
@@ -217,7 +217,7 @@ export const pricingBundles: PricingBundle[] = [
     audience: 'Team commerciali/amministrativi',
     price: '€24,90',
     description: 'Il controllo consigliato prima di spedire, concedere credito o attivare una collaborazione ricorrente.',
-    services: ['Score sintetico', 'Segnali di attenzione', 'Soggetti collegati', 'Prossima azione consigliata'],
+    services: ['Sintesi del livello di attenzione', 'Segnali di attenzione', 'Soggetti collegati', 'Prossima azione consigliata'],
     ctaHref: '/checkout?service=COMPANY_PRO'
   },
   {
@@ -225,7 +225,7 @@ export const pricingBundles: PricingBundle[] = [
     audience: 'Compliance e direzione',
     price: '€49,90',
     description: 'Per controlli su fornitori strategici, partner e rapporti che richiedono maggiore prudenza.',
-    services: ['Assetti e soggetti rilevanti', 'Titolare effettivo se disponibile', 'AML/PEP dove applicabile', 'Sintesi compliance'],
+    services: ['Assetti e soggetti rilevanti', 'Titolare effettivo se disponibile', 'AML/PEP dove applicabile', 'Sintesi per decisioni prudenti'],
     ctaHref: '/checkout?service=KYB_COMPLIANCE'
   }
 ];

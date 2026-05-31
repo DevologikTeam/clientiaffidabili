@@ -53,7 +53,7 @@ export default function HomePage() {
           <div className="container ca-stack">
             <SectionHeader
               eyebrow="Percorso semplice"
-              title="Dal dubbio commerciale al report in pochi passaggi."
+              title="Da un dubbio sul cliente a una decisione più sicura."
               description="Scegli cosa controllare, confermi la finalità, vedi il prezzo prima del pagamento e ricevi una sintesi leggibile con fonti, segnali e limiti."
               align="center"
             />
@@ -92,8 +92,8 @@ export default function HomePage() {
           <div className="container ca-stack">
             <SectionHeader
               eyebrow="Perché scegliere ClientiAffidabili.it"
-              title="Meno incertezza prima di prendere impegni commerciali."
-              description="Il valore non è solo il dato: è sapere cosa guardare, quanto costa, quali limiti restano e quale prossima azione considerare."
+              title="Più chiarezza prima di prendere impegni con clienti e fornitori."
+              description="Il valore è sapere cosa viene controllato, quanto costa, quali limiti restano e quale decisione puoi prendere con più prudenza."
             />
             <div className="grid-3">
               <StatCard label="Prima dell’ordine" value="Prezzo chiaro" description="Vedi importo, servizio e dati richiesti prima del pagamento." status="Trasparente" tone="success" />

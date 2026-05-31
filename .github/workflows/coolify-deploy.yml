@@ -1,0 +1,48 @@
+name: Coolify Deploy
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  qa-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile=false
+      - run: pnpm release:pre-zip-check
+      - name: Select Coolify webhook
+        id: coolify
+        shell: bash
+        env:
+          STAGING_WEBHOOK: ${{ secrets.COOLIFY_STAGING_WEBHOOK_URL }}
+          PRODUCTION_WEBHOOK: ${{ secrets.COOLIFY_PRODUCTION_WEBHOOK_URL }}
+        run: |
+          if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
+            echo "url=${PRODUCTION_WEBHOOK}" >> "$GITHUB_OUTPUT"
+            echo "environment=production" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=${STAGING_WEBHOOK}" >> "$GITHUB_OUTPUT"
+            echo "environment=staging" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Trigger Coolify deploy
+        if: ${{ steps.coolify.outputs.url != '' }}
+        run: |
+          curl -fsS -X POST "${{ steps.coolify.outputs.url }}"
+      - name: Coolify webhook missing
+        if: ${{ steps.coolify.outputs.url == '' }}
+        run: |
+          echo "Coolify webhook secret not configured for ${{ steps.coolify.outputs.environment }}. QA passed; deploy skipped."

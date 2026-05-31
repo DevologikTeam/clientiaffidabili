@@ -1,16 +1,16 @@
 # ClientiAffidabili.it Foundation
 
-Versione corrente: 0.75.0
+Versione corrente: 0.75.3
 
-Sprint corrente: v0.75.0 — Public Trust Copy, Logo & Layout Polish.
+Sprint corrente: v0.75.3 — Public Copy Type Guard Fix.
 
-Ultimo incremento: logo pubblico visibile, home/servizi/prezzi riscritti per il cliente finale e QA contro copy tecnico nelle pagine marketing.
+Ultimo incremento: corretto il build blocker TypeScript su `EducationMetaStrip`, sostituendo confronti legacy con mappe esaustive tipizzate per intent e cluster customer education.
 
 Prossimo sprint: M22-A Pilot Launch & Operations Analysis.
 
 ## Storico essenziale
 
-- v0.75.0: Public Trust Copy, Logo & Layout Polish.
+- v0.75.3: Public Trust Copy, Logo & Layout Polish.
 - v0.74.0: M21-S RC Hardening Development.
 
 - v0.74.18: Web Healthz & Container Healthcheck Patch 17.
@@ -28,3 +28,8 @@ Prossimo sprint: M22-A Pilot Launch & Operations Analysis.
 - v0.74.9: Docker Runtime Next Dependencies & TypeORM Postgres Metadata Patch 9.
 - v0.74.8: Docker Runtime Static Guards Patch 8.
 - v0.74.7: Web Build Static Guards Patch 7.
+
+
+## v0.75.3 note
+
+Patch copy cliente-finale e Git flow Coolify aggiunti: niente tassonomie interne nelle guide pubbliche, branch develop/main, tag versione e workflow webhook Coolify.

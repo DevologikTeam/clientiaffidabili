@@ -14,9 +14,9 @@ const scenarioTitles: Record<string, string> = {
 };
 
 const scenarioDescriptions: Record<string, string> = {
-  'new-customer': 'Per decidere se procedere con preventivo, spedizione, pagamento differito o collaborazione commerciale.',
+  'new-customer': 'Per decidere se inviare un preventivo, spedire merce, concedere pagamento differito o chiedere maggiori garanzie.',
   supplier: 'Per qualificare fornitori e partner prima di affidare incarichi, acquistare o avviare rapporti sensibili.',
-  'payment-data': 'Per ridurre errori su IBAN, email e telefono prima di salvarli nei processi amministrativi o commerciali.',
+  'payment-data': 'Per ridurre errori su IBAN, email e telefono prima di usarli in amministrazione, CRM o onboarding.',
 };
 
 export const metadata = buildPublicMetadata({
@@ -39,8 +39,8 @@ export default function ServiziPage() {
           <div className="container ca-stack">
             <SectionHeader
               eyebrow="Servizi disponibili"
-              title="Scegli la verifica giusta prima di vendere, spedire o pagare."
-              description="Ogni servizio indica cosa controlla, quali dati servono, quanto costa, quanto tempo richiede e quali limiti restano."
+              title="Scegli cosa controllare prima di vendere, spedire o pagare."
+              description="Ogni scheda mostra prezzo, tempi indicativi, dati richiesti, cosa ricevi e limiti principali prima dell’acquisto."
             />
             <div className="ca-category-strip" aria-label="Categorie disponibili">
               {categories.map((category) => <span key={category}>{category}</span>)}

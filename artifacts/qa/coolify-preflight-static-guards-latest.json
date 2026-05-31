@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T15:14:27.396Z",
+  "generatedAt": "2026-05-31T16:13:10.033Z",
   "status": "passed",
   "guardedPreflight": [
     "pnpm install when node_modules is missing",

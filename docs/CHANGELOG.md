@@ -1,3 +1,17 @@
+
+## v0.75.3 - Contact Form Senior UX Review
+
+- Migliorato il form contatti pubblico con layout a due colonne, card form piu stretta, fieldset, hint e messaggi success/error.
+- Aggiunta route Next server-side per inoltrare il form al backend API tramite INTERNAL_API_URL.
+- Aggiornati compose/env per supportare chiamate server-side web -> API.
+- Aggiunto QA qa-contact-form-design.
+
+## v0.75.2 - Public copy intent type guard fix
+
+- Corretto `EducationMetaStrip`: rimosso confronto legacy `intent === 'commercial'` non piu compatibile con `EducationIntent`.
+- Aggiunte mappe esaustive tipizzate per intent e cluster customer education.
+- Rafforzato `qa-public-copy-trust-polish.js` per bloccare confronti impossibili tra literal TypeScript e union runtime.
+
 ## 0.75.0 - Public Trust Copy, Logo & Layout Polish
 
 - Logo pubblico reso leggibile con mark + wordmark.

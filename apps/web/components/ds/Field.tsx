@@ -16,19 +16,21 @@ type SharedFieldProps = {
   helpText?: string;
   error?: string;
   as?: 'input' | 'textarea';
+  wrapperClassName?: string;
 };
 
 type FieldProps = SharedFieldProps &
   InputHTMLAttributes<HTMLInputElement> &
   TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-export function Field({ label, name, hint, helpText, error, as = 'input', id, ...props }: FieldProps) {
+export function Field({ label, name, hint, helpText, error, as = 'input', id, wrapperClassName, ...props }: FieldProps) {
   const fieldName = name ?? String(id ?? fieldIdFromLabel(label));
   const fieldId = String(id ?? fieldName);
   const help = helpText ?? hint;
   const describedBy = [help ? `${fieldId}-hint` : undefined, error ? `${fieldId}-error` : undefined].filter(Boolean).join(' ') || undefined;
+  const fieldClassName = ['ca-field', wrapperClassName ?? ''].filter(Boolean).join(' ');
   return (
-    <label className="ca-field" htmlFor={fieldId}>
+    <label className={fieldClassName} htmlFor={fieldId}>
       <span>{label}</span>
       {as === 'textarea' ? (
         <textarea id={fieldId} name={fieldName} aria-invalid={Boolean(error)} aria-describedby={describedBy} {...props} />

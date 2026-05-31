@@ -1,10 +1,10 @@
 # ClientiAffidabili.it Project Manifest
 
-Versione corrente: 0.75.0
+Versione corrente: 0.75.3
 
-Sprint corrente: v0.75.0 — Public Trust Copy, Logo & Layout Polish.
+Sprint corrente: v0.75.3 — Public Copy Type Guard Fix.
 
-Ultimo incremento: sostituito logo pubblico, resa visibile la wordmark, riscritte home/servizi/prezzi in linguaggio cliente finale e aggiunto QA contro copy tecnico nelle pagine pubbliche.
+Ultimo incremento: corretto il build blocker TypeScript su `EducationMetaStrip`, sostituendo confronti legacy con mappe esaustive tipizzate per intent e cluster customer education.
 
 Prossimo sprint: M22-A Pilot Launch & Operations Analysis.
 
@@ -19,7 +19,7 @@ Prossimo sprint: M22-A Pilot Launch & Operations Analysis.
 - v0.72.0: M21-A RC Hardening Analysis.
 - v0.73.0: M21-P RC Hardening Design.
 - v0.74.0: M21-S RC Hardening Development.
-- v0.75.0: Public Trust Copy, Logo & Layout Polish.
+- v0.75.3: Public Copy Intent Type Guard Fix.
 - v0.74.19: Local Browser Reachable Preflight Patch 18.
 - v0.74.18: Web Healthz & Container Healthcheck Patch 17.
 - v0.74.17: Coolify Preflight DB Schema & Container Health Patch 16.
@@ -36,3 +36,8 @@ Prossimo sprint: M22-A Pilot Launch & Operations Analysis.
 - v0.74.9: Docker Runtime Next Dependencies & TypeORM Postgres Metadata Patch 9.
 - v0.74.8: Docker Runtime Static Guards Patch 8.
 - v0.74.7: Web Build Static Guards Patch 7.
+
+
+## v0.75.3 note
+
+Patch build/type guard: `EducationMetaStrip` usa mappe esaustive tipizzate e il QA pubblico blocca confronti legacy non presenti nelle union runtime.
